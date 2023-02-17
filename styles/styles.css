@@ -1492,7 +1492,6 @@ footer .connect .tel-info p {
   }
   #landing_header .landing_body .landing__carousel__container .carousel__track .landing_statement {
     margin: 0;
-    top: 25%;
     left: 2%;
     position: absolute;
     font-size: var(--fs-xxl);
