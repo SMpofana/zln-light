@@ -1,4 +1,5 @@
 //Animation Keyframes
+
 @-webkit-keyframes scale-in-hor-left {
     0% {
       -webkit-transform: scaleX(0);
@@ -31,6 +32,40 @@
       opacity: 1;
     }
   }
+
+  @-webkit-keyframes scale-in-hor-right {
+    0% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-hor-right {
+    0% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+      opacity: 1;
+    }
+  }
+  
   @-webkit-keyframes scale-in-ver-top {
     0% {
       -webkit-transform: scaleY(0);
@@ -63,38 +98,6 @@
       opacity: 1;
     }
   }
-  @-webkit-keyframes scale-in-hor-right {
-    0% {
-      -webkit-transform: scaleX(0);
-              transform: scaleX(0);
-      -webkit-transform-origin: 100% 100%;
-              transform-origin: 100% 100%;
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: scaleX(1);
-              transform: scaleX(1);
-      -webkit-transform-origin: 100% 100%;
-              transform-origin: 100% 100%;
-      opacity: 1;
-    }
-  }
-  @keyframes scale-in-hor-right {
-    0% {
-      -webkit-transform: scaleX(0);
-              transform: scaleX(0);
-      -webkit-transform-origin: 100% 100%;
-              transform-origin: 100% 100%;
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: scaleX(1);
-              transform: scaleX(1);
-      -webkit-transform-origin: 100% 100%;
-              transform-origin: 100% 100%;
-      opacity: 1;
-    }
-  }  
 
   @-webkit-keyframes slide-in-left {
     0% {
@@ -120,6 +123,7 @@
       opacity: 1;
     }
   }
+  
   @-webkit-keyframes slide-in-right {
     0% {
       -webkit-transform: translateX(1000px);
@@ -169,30 +173,43 @@
       opacity: 1;
     }
   }
+  
+  
 
-  @-webkit-keyframes cliprotate {
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(360deg);}
- }
- @keyframes cliprotate {
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(360deg);}
- }
- @-webkit-keyframes rotate {
-    0% {transform: rotate(-45deg);}
-    100% {transform: rotate(135deg);}
- }
- @keyframes rotate {
-    0% {transform: rotate(-45deg);}
-    100% {transform: rotate(135deg);}
- }
- @keyframes showfixed {
-    0% {opacity: 0;}
-    49.9% {opacity: 0;}
-    50% {opacity: 1;}
-    100% {opacity: 1;}
- }
-    
+ 
+
+//Animation classes
+
+.scale-in-hor-left {
+	-webkit-animation: scale-in-hor-left 1s linear both;
+	        animation: scale-in-hor-left 1s linear both;
+}
+
+.scale-in-hor-right {
+	-webkit-animation: scale-in-hor-right 1s ease-in-out both;
+	        animation: scale-in-hor-right 1s ease-in-out both;
+}
+
+.scale-in-ver-top {
+	-webkit-animation: scale-in-ver-top 1s cubic-bezier(0.550, 0.055, 0.675, 0.190) both;
+	        animation: scale-in-ver-top 1s cubic-bezier(0.550, 0.055, 0.675, 0.190) both;
+}
+
+.slide-in-left {
+	-webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide-in-right {
+	-webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.text-focus-in {
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
 
  //styling
 :root{
@@ -499,9 +516,7 @@ section{
             font-size: var(--fs-m);
             margin: 0;
             font-family: geneva-regular;
-            -webkit-animation: scale-in-ver-top 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: scale-in-ver-top 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both; 
-        }
+           }
 
         .landing__carousel__container{
             width: 55%;
@@ -510,13 +525,13 @@ section{
             top: 0%;
             right: 0;
             overflow: hidden;
-            -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+           
 
             .carousel__track{
                 width: 100%;
                 height: 100%;
                 position: relative;
+                overflow: hidden;
 
                 .landing_statement{
                     margin: 0;
@@ -576,7 +591,7 @@ section{
                     cursor: pointer;
 
                     &.active{
-                        border: .15em solid rgba(43, 131, 181, 1);    
+                        background-color:  rgba(43, 131, 181, 1);    
                     }
                 }
 
@@ -670,17 +685,14 @@ section{
             width: 50%;
             height: .1em;
             background-color: #2B83B5;
-            -webkit-animation: scale-in-hor-left 1s ease-in-out both;
-	        animation: scale-in-hor-left 1s ease-in-out both;
-
+           
         }
 
         .vision_header_text{
             margin: 0;
             font-size: var(--fs-m);
 
-            -webkit-animation: scale-in-ver-top 1s ease-in-out 1s both;
-	        animation: scale-in-ver-top 1s ease-in-out 1s both;
+            
             
         }
 
@@ -696,8 +708,7 @@ section{
         line-height: 1em;
         display: block;
         
-        -webkit-animation: text-focus-in 1s ease-in-out both;
-	        animation: text-focus-in 1s ease-in-out both;
+        
 
 
     }
@@ -718,15 +729,14 @@ section{
             font-size: var(--fs-l);
 
             svg{
-                -webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
-	            animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+                display: block;
+                
             }
 
             .advantage_copy{
                 margin: 0;
 
-                -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
-	        animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+                
             }
 
 
@@ -758,8 +768,7 @@ section{
             width: 50%;
             height: .1em;
             background-color: var(--color-ming);
-            -webkit-animation: scale-in-hor-left 1s ease-in-out both;
-	        animation: scale-in-hor-left 1s ease-in-out both;
+           
 
         }
 
@@ -767,8 +776,7 @@ section{
             margin: 0;
             font-size: var(--fs-m);
 
-            -webkit-animation: scale-in-ver-top 1s ease-in-out 1s both;
-	        animation: scale-in-ver-top 1s ease-in-out 1s both;
+           
 
         }
     }
@@ -789,8 +797,7 @@ section{
             text-transform: uppercase;
             z-index: 10;
 
-            -webkit-animation: scale-in-ver-top 1s ease-in-out 1s both;
-	        animation: scale-in-ver-top 1s ease-in-out 1s both;
+           
 
             .heading{
                 cursor: pointer;
@@ -853,8 +860,7 @@ section{
                         .work_card_title{
                             font-size: var(--fs-l);
 
-                            -webkit-animation: slide-in-left 1s ease-in-out 1s both;
-	                            animation: slide-in-left 1s ease-in-out 1s both;
+                            
                         }
 
                         .work_card_copy{
@@ -862,8 +868,7 @@ section{
                             font-size: var(--fs-m);
                             line-height: 1.5em;
 
-                            -webkit-animation: slide-in-left 1s ease-in-out 1s both;
-	                            animation: slide-in-left 1s ease-in-out 1s both;
+                           
                         }
 
                         .work_card_img{
@@ -872,8 +877,7 @@ section{
                             position: absolute;
                             right: 25%;
 
-                            -webkit-animation: slide-in-right 1s ease-in-out 1s both;
-	                            animation: slide-in-right 1s ease-in-out 1s both;
+                            
 
                             img{
                                 width: 100%;
@@ -989,8 +993,7 @@ section{
             width: 50%;
             height: .1em;
             background-color: var(--color-ming);
-            -webkit-animation: scale-in-hor-left 1s ease-in-out both;
-	        animation: scale-in-hor-left 1s ease-in-out both;
+            
 
         }
 
@@ -998,8 +1001,7 @@ section{
             margin: 0;
             font-size: var(--fs-m);
 
-            -webkit-animation: scale-in-ver-top 1s ease-in-out 1s both;
-	        animation: scale-in-ver-top 1s ease-in-out 1s both;
+            
 
         }
     }
@@ -1036,8 +1038,7 @@ section{
                     background-color: var(--color-grey);
                     display: block;
     
-                    -webkit-animation: scale-in-left 1s ease-in-out 1.5s both;
-                                    animation: scale-in-left 1s ease-in-out 1.5s both;
+                   
                 }
     
                 p{
@@ -1045,8 +1046,7 @@ section{
                     font-size: var(--fs-xl);
                     font-family: 'Bebas Neue', cursive;
 
-                    -webkit-animation: scale-in-left 1s ease-in-out 2s both;
-                                    animation: scale-in-left 1s ease-in-out 2s both;
+                    
                     
                 }
             }
@@ -1063,8 +1063,7 @@ section{
                     background-color: var(--color-grey);
                     display: block;
     
-                    -webkit-animation: scale-in-right 1s ease-in-out 1s both;
-                                    animation: scale-in-right 1s ease-in-out 1s both;
+                    
                 }
     
                 p{
@@ -1072,8 +1071,7 @@ section{
                     font-size: var(--fs-xl);
                     font-family: 'Bebas Neue', cursive;
 
-                    -webkit-animation: scale-in-right 1s ease-in-out 1.5s both;
-                                    animation: scale-in-right 1s ease-in-out 1.5s both;
+                    
                 }
                 
             }
@@ -1087,9 +1085,7 @@ section{
                 justify-content: center;
                 align-items: center;
 
-                -webkit-animation: cliprotate 1s ease-in-out 1s both;
-	                            animation: cliprotate 1s ease-in-out 1s both;
-
+                
                 svg{
                     font-size: 2.5em;
                 }
@@ -1110,8 +1106,7 @@ section{
             padding: 1em;
             position: relative;
 
-            -webkit-animation: scale-in-ver-top 1s ease-in-out 1.5s both;
-                    animation: scale-in-ver-top 1s ease-in-out 1.5s both;
+            
 
             .solution_card{
                 width: 30vw;
@@ -1178,8 +1173,7 @@ section{
         display: flex;
         padding: .5em;
 
-        -webkit-animation: text-focus-in 1s ease-in-out 1.5s both;
-                animation: text-focus-in 1s ease-in-out 1.5s both;
+        
 
         .contact_section{
             width: 50%;
@@ -1288,7 +1282,7 @@ section{
                                 }
 
                                 p{
-                                    animation: scale-in-hor-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                                    
                                     transition: all .5s ease-in-out;
                                     background-color: white;
                                     color: black;
@@ -2301,7 +2295,7 @@ footer{
             position: absolute;
             display: flex;
             flex-direction: column;
-            top: 2em;
+            top: 5%;
             align-items: flex-start;
     
             .work_heading{
@@ -2365,17 +2359,16 @@ footer{
     
                         .business_work_card{
                             width: 100%;
-                            height: 100vh;
+                            height: 60%;
                             position: absolute;
                             left: 100%;
                             display: flex;
                             flex-direction: column;
                             gap: 2em;
                             flex-wrap: wrap;
-                            box-shadow: 2px 2px 8px;
                             /* From https://css.glass */
                             background: rgba(255, 255, 255, 0.07);
-                            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
                             backdrop-filter: blur(4.3px);
                             -webkit-backdrop-filter: blur(4.3px);
                             // border: 1px solid rgba(70, 70, 70, 0.07);
@@ -2389,7 +2382,7 @@ footer{
                             .work_card_title{
                                 font-size: var(--fs-l);
                                 position: relative;
-                                top: 12%;
+                                top: 30%;
                                 font-family: 'Bebas Neue', cursive;
     
                                 -webkit-animation: slide-in-left 1s ease-in-out 1s both;
@@ -2401,7 +2394,7 @@ footer{
                                 font-size: var(--fs-m);
                                 line-height: 1.5em;
                                 position: relative;
-                                top: 3em;
+                                top: 4em;
     
                                 -webkit-animation: slide-in-left 1s ease-in-out 1s both;
                                     animation: slide-in-left 1s ease-in-out 1s both;
@@ -2409,7 +2402,7 @@ footer{
     
                             .work_card_img{
                                 width: 95%;
-                                height: 20%;
+                                height: 45%;
                                 position: absolute;
                                 left: 0;
                                 top: -4em;
@@ -2868,6 +2861,7 @@ footer{
                                     .social_icon{
                                         background-color: var(--color-primary);
                                         border: .2em solid white;
+                                        display: none;
     
                                         svg{
                                             color: white;
