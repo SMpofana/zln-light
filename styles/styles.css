@@ -1438,14 +1438,14 @@ footer .connect .tel-info p {
     width: 75%;
     height: 0.2em;
     position: absolute;
-    top: 35%;
+    top: 40%;
     left: 2%;
     background-color: var(--color-primary);
   }
   #landing_header .landing_body .landing_intro {
     width: 98%;
     position: relative;
-    top: 36%;
+    top: 41%;
     left: 2%;
     font-size: var(--fs-m);
     margin: 0;

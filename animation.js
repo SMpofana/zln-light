@@ -13,7 +13,7 @@ scrollTracker.animate(
         transform: [ "scaleY(0)", "scaleY(1)"],
     }, 
     {
-        duration: 1,
+        duration: 5,
         timeline: scrollTrackingTimeline,
     }
 );
