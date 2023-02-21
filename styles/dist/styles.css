@@ -1989,7 +1989,7 @@ footer .connect .tel-info p {
     display: flex;
     flex-wrap: wrap;
     padding: 1em;
-    top: 5em;
+    top: 15vh;
   }
   #solutions .solutions_header {
     width: 100%;
@@ -2095,7 +2095,7 @@ footer .connect .tel-info p {
   }
   #solutions .solutions_container .solution_card_container .solution_card {
     width: 100%;
-    height: 70vh;
+    height: 65vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -2437,8 +2437,8 @@ footer .connect .tel-info p {
     opacity: 1;
   }
   #contact .contact_container .contact_section#contact_form .form-container button {
-    width: 12em;
-    height: 3em;
+    width: 8em;
+    height: 2.5em;
     background: none;
     font-size: 1.2em;
     color: black;
@@ -2458,7 +2458,6 @@ footer .connect .tel-info p {
     top: 141.1%;
     width: 100%;
     height: 3%;
-    background-color: #2b83b5;
     z-index: 100;
     justify-content: space-between;
     align-items: center;
@@ -2466,13 +2465,15 @@ footer .connect .tel-info p {
     font-family: geneva-regular;
     color: #929497;
     text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    border-top: 1px solid var(--color-primary);
   }
   footer .footer-copyrite {
+    width: 100%;
     height: 100%;
     position: relative;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
   footer .footer-copyrite .company-name {
     font-size: 1em;
@@ -2485,7 +2486,8 @@ footer .connect .tel-info p {
   footer .footer-copyrite .copyrite {
     display: flex;
     align-items: center;
-    gap: 1em;
+    gap: 0.2em;
+    margin: 0 auto;
   }
   footer .footer-copyrite .copyrite span {
     font-size: 1.5em;
@@ -2502,13 +2504,6 @@ footer .connect .tel-info p {
     display: none;
   }
   footer .address {
-    width: 30%;
-    display: flex;
-    text-transform: lowercase;
-    font-size: var(--fs-xs);
-    justify-content: center;
-    align-items: center;
-    gap: 3em;
     display: none;
   }
   footer .address span {
