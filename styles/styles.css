@@ -1748,7 +1748,7 @@ footer .connect .tel-info p {
   #work .work_container .work_body .work_content .business_work_container .business_work_card .work_card_title {
     font-size: var(--fs-l);
     position: relative;
-    top: 30%;
+    top: 22vh;
     font-family: "Bebas Neue", cursive;
     animation: slide-in-left 1s ease-in-out 1s both;
   }
@@ -1757,7 +1757,7 @@ footer .connect .tel-info p {
     font-size: var(--fs-m);
     line-height: 1.2em;
     position: relative;
-    top: 15vh;
+    top: 18vh;
     padding: 0.1em;
     animation: slide-in-left 1s ease-in-out 1s both;
   }
