@@ -655,6 +655,7 @@ section {
 }
 #work .work_container .work_heading .heading {
   cursor: pointer;
+  font-family: "Bebas Neue", cursive;
 }
 #work .work_container .work_heading .heading.active {
   border-bottom: 0.1em solid var(--color-ming);
@@ -705,6 +706,7 @@ section {
 }
 #work .work_container .work_body .work_content .business_work_container .business_work_card .work_card_title {
   font-size: var(--fs-l);
+  font-family: "Bebas Neue", cursive;
 }
 #work .work_container .work_body .work_content .business_work_container .business_work_card .work_card_copy {
   width: 45%;
@@ -721,7 +723,7 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  box-shadow: 15px -15px var(--color-ming);
+  box-shadow: 3px -3px var(--color-ming);
 }
 #work .work_container .work_body .work_content .home_work_container {
   width: 100%;
@@ -746,6 +748,7 @@ section {
 }
 #work .work_container .work_body .work_content .home_work_container .home_work_card .work_card_title {
   font-size: var(--fs-l);
+  font-family: "Bebas Neue", cursive;
 }
 #work .work_container .work_body .work_content .home_work_container .home_work_card .work_card_copy {
   width: 45%;
@@ -762,7 +765,7 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  box-shadow: 15px -15px var(--color-ming);
+  box-shadow: 3px -3px var(--color-ming);
 }
 #work .work_container .work_body .work_contact_btn {
   width: 10em;
@@ -781,6 +784,8 @@ section {
   border: none;
   font-size: var(--fs-m);
   padding: 0.5em;
+  border-radius: 1.5em;
+  border: 1px solid var(--color-ming);
 }
 #work .work_container .work_body .work_contact_btn button:hover {
   background-color: var(--color-ming);
@@ -830,6 +835,7 @@ section {
   width: 100%;
   display: flex;
   align-items: center;
+  font-family: "Bebas Neue", Arial;
 }
 #solutions .solutions_container .solutions_heading#business {
   justify-content: start;
@@ -883,10 +889,12 @@ section {
 }
 #solutions .solutions_container .solution_card_container .solution_card {
   width: 30vw;
-  height: 85vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: 1px 1px 4px;
+  padding: 0.2em;
 }
 #solutions .solutions_container .solution_card_container .solution_card .solution_card_img {
   width: 100%;
@@ -910,6 +918,8 @@ section {
   height: 50%;
   width: 100%;
   position: inherit;
+  display: flex;
+  align-items: start;
 }
 
 #contact {
@@ -965,7 +975,7 @@ section {
   justify-content: space-between;
 }
 #contact .contact_container .contact_section#call-to-action .cta_body .social_contact {
-  width: 50%;
+  width: 20%;
   display: flex;
   flex-direction: column;
   gap: 1.5em;
@@ -1027,7 +1037,7 @@ section {
   gap: 2;
 }
 #contact .contact_container .contact_section#call-to-action .cta_body .map_location {
-  width: 50%;
+  width: 70%;
   height: 90%;
   overflow: hidden;
 }
@@ -2082,7 +2092,7 @@ footer .connect .tel-info p {
   }
   #solutions .solutions_container .solution_card_container .solution_card {
     width: 100%;
-    height: 55vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -2102,10 +2112,11 @@ footer .connect .tel-info p {
     display: flex;
     align-items: center;
     justify-content: center;
+    left: 0;
   }
   #solutions .solutions_container .solution_card_container .solution_card .solution_card_img img {
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
     object-fit: cover;
   }
   #solutions .solutions_container .solution_card_container .solution_card .card_header {
@@ -2114,7 +2125,7 @@ footer .connect .tel-info p {
     font-size: var(--fs-m);
     font-weight: 600;
     position: relative;
-    top: 8em;
+    top: 50%;
     padding: 0.2em;
   }
   #solutions .solutions_container .solution_card_container .solution_card .card_text {
@@ -2296,9 +2307,8 @@ footer .connect .tel-info p {
     text-align: left;
   }
   #contact .contact_container .contact_section#contact_form .form-container .form-header .heading.active {
-    width: 20%;
+    width: 40%;
     height: 3rem;
-    border-radius: 20px;
     display: flex;
   }
   #contact .contact_container .contact_section#contact_form .form-container .form-header .heading.active span {
@@ -2430,7 +2440,6 @@ footer .connect .tel-info p {
     font-size: 1.2em;
     color: black;
     border: 1px solid var(--color-primary);
-    border-radius: 1.5em;
     cursor: pointer;
   }
   #contact .contact_container .contact_section#contact_form .form-container button:hover {
