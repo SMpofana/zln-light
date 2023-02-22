@@ -216,6 +216,7 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -227,6 +228,7 @@ html {
   height: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -467,7 +469,7 @@ section {
   position: absolute;
   font-size: var(--fs-xxl);
   font-family: "Bebas Neue", Arial;
-  font-weight: 900;
+  font-weight: 100;
 }
 #landing_header .header_bottom {
   width: 100%;
