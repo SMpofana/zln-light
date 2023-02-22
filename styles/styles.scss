@@ -1,3 +1,8 @@
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Petrona:wght@300&family=Roboto+Mono&display=swap');
+
+
 //Animation Keyframes
 
 @-webkit-keyframes scale-in-hor-left {
@@ -223,10 +228,10 @@
     --box-shadow-1: 0 3px 15px rgba(0,0,0,.2);
 
     //font size
-    --fs-xxl: clamp(6em, 7.5vw + 1em, 7.5em);
-    --fs-xl: clamp(4em, 6vw + 1em, 6em);
+    --fs-xxl: clamp(5em, 6.5vw + 1em, 5em);
+    --fs-xl: clamp(3em, 5vw + 1em, 5em);
     --fs-l: 3em;
-    --fs-m: 1.5em;
+    --fs-m: 1.2em;
     --fs-s: 1em;
 }
 
@@ -251,7 +256,7 @@ html{
     
 }
 body{
-    font-family: geneva-regular;
+    font-family: 'Petrona', serif;
     width: 100%;
     font-size: 1.1rem;
     transition: all .4s ease-in-out;
@@ -260,6 +265,7 @@ body{
     position: relative;
     overscroll-behavior-x: none;
     overflow-x: hidden;
+    background-color: rgba(255, 255, 255, 1);
     
 }
 
@@ -278,6 +284,9 @@ section{
     width: 100%;
     height: 100%;
     position: relative;
+    background-color: rgba(255, 255, 255, 1);
+
+    
 }
 
 #landing_header{
@@ -289,6 +298,7 @@ section{
     width: 100vw;
     margin: 0 auto;
     background: none;
+    
 
     .header_mask{
         width: 100vw;
@@ -302,9 +312,13 @@ section{
     .header_vd_bg{
         position: relative;
         overflow: hidden;
-        width: 100%;
+        width: 100vw;
         height: 100vh;
         border: none;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         
 
         video{
@@ -357,8 +371,8 @@ section{
             .header_company_name{
                 margin: 0 auto;
                 text-transform: uppercase;
-                font-family: 'Bebas-Neue', Arial;
-                font-size: var(--fs-m);
+                font-family: 'Roboto Mono', monospace;
+                font-size: var(--fs-l);
                 font-weight: 900;
                 letter-spacing: .2em;
 
@@ -517,11 +531,11 @@ section{
             left: 2%;
             font-size: var(--fs-m);
             margin: 0;
-            font-family: geneva-regular;
+           font-family: 'Petrona', serif;
            }
 
         .landing__carousel__container{
-            width: 55%;
+            width: 60%;
             height: 55%;
             position: relative;
             top: 0%;
@@ -541,7 +555,7 @@ section{
                     right: 2%;
                     position: absolute;
                     font-size: var(--fs-xxl);
-                    font-family: 'Bebas Neue', Arial;
+                    font-family: 'Roboto Mono', monospace;
                     font-weight: 100;
                 }
             }
@@ -675,6 +689,7 @@ section{
     display: flex;
     margin: 0 auto;
     padding: 1em;
+    
 
     .vision_header{
 
@@ -803,7 +818,7 @@ section{
 
             .heading{
                 cursor: pointer;
-                font-family: 'Bebas Neue', cursive;
+                font-family: 'Roboto Mono', monospace;
 
                 &.active{
 
@@ -862,7 +877,7 @@ section{
 
                         .work_card_title{
                             font-size: var(--fs-l);
-                            font-family: 'Bebas Neue', cursive;
+                            font-family: 'Roboto Mono', monospace;
 
                             
                         }
@@ -920,7 +935,7 @@ section{
 
                         .work_card_title{
                             font-size: var(--fs-l);
-                            font-family: 'Bebas Neue', cursive;
+                            font-family: 'Roboto Mono', monospace;
                         }
 
                         .work_card_copy{
@@ -1054,7 +1069,7 @@ section{
                 p{
                     margin: 0;
                     font-size: var(--fs-xl);
-                    font-family: 'Bebas Neue', cursive;
+                    font-family: 'Roboto Mono', monospace;
 
 
                     
@@ -1080,7 +1095,7 @@ section{
                 p{
                     margin: 0;
                     font-size: var(--fs-xl);
-                    font-family: 'Bebas Neue', cursive;
+                    font-family: 'Roboto Mono', monospace;
 
                     
                 }
@@ -1102,10 +1117,6 @@ section{
                 }
 
             }
-
-           
-
-
 
             
         }
@@ -1143,7 +1154,7 @@ section{
 
                 .card_header{
                     width: 100%;
-                    font-family: 'Bebas Neue', cursive;
+                    font-family: 'Roboto Mono', monospace;
                     font-size: var(--fs-m);
                     font-weight: 600;
                 }
@@ -1214,16 +1225,16 @@ section{
 
                     p{
                         margin: 0;
-                        font-size: var(--fs-xl);
+                        font-size: 5vw;
                         color: black;
-                        font-family: 'Bebas Neue', Cursive;
+                        font-family: 'Roboto Mono', monospace;
                         line-height: .8em;
                     }
 
                     span{
                         text-transform: uppercase;
                         font-size: var(--fs-m);
-                        font-family: 'Bebas Neue', Cursive;
+                        font-family: 'Roboto Mono', monospace;
                         position: relative;
                         top: 10%;
                     }
@@ -1367,7 +1378,7 @@ section{
                             justify-content: center;
                             transition: all 300ms ease-in-out;
                             cursor: pointer;
-                            font-family: 'Futura-Bold', arial;
+                            font-family: 'Roboto Mono', monospace;
                             font-weight: 600;
                             
                             align-items: center;
@@ -1547,7 +1558,7 @@ section{
                                     border: none;
                                     display: block;
                                     text-align: center;
-                                    font-family: Geneva-regular;
+                                   font-family: 'Petrona', serif;
                                     font-size: 1em;
                                     border-radius: 0.5em;
     
@@ -1623,7 +1634,7 @@ footer{
     justify-content: space-between;
     align-items: center;
     padding: .5em;
-    font-family: geneva-regular;
+   font-family: 'Petrona', serif;
     color: var(--color-primary);
     text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
 
@@ -1740,8 +1751,8 @@ footer{
         --box-shadow-1: 0 3px 15px rgba(0,0,0,.2);
     
         //font size
-        --fs-xxl: clamp(3em, 5.5vw + .5em, 3em);
-        --fs-xl: clamp(2em, 4vw + 1em, 4em);
+        --fs-xxl: clamp(2em, 5.5vw + .5em, 5em);
+        --fs-xl: clamp(1em, 3.5vw + 1em, 4em);
         --fs-l: 2em;
         --fs-m: 1.2em;
         --fs-s: .5em;
@@ -1842,7 +1853,7 @@ footer{
                 .header_company_name{
                     margin: 0 auto;
                     text-transform: uppercase;
-                    font-family: 'Bebas-Neue', Arial;
+                    font-family: 'Roboto Mono', monospace;
                     font-size: var(--fs-m);
                     font-weight: 900;
                     letter-spacing: .2em;
@@ -2007,7 +2018,7 @@ footer{
                 left: 2%;
                 font-size: var(--fs-m);
                 margin: 0;
-                font-family: geneva-regular;
+               font-family: 'Petrona', serif;
                 /* From https://css.glass */
                 background: rgba(70, 70, 70, 0.07);
                 border-radius: 16px;
@@ -2040,7 +2051,7 @@ footer{
                         left: 2%;
                         position: absolute;
                         font-size: var(--fs-xxl);
-                        font-family: 'Bebas Neue', Arial;
+                        font-family: 'Roboto Mono', monospace;
                         font-weight: 900;
                     }
                 }
@@ -2132,9 +2143,9 @@ footer{
                         .header_bottom_headline{
                             position: relative;
                             top: 0;
-                            font-size: 2em;
+                            font-size: 1.5em;
                             margin: 0;
-                            font-family: 'Bebas Neue', cursive;
+                            font-family: 'Roboto Mono', monospace;
     
                             h5{
                                 margin: 0;
@@ -2321,7 +2332,7 @@ footer{
                 font-size: 1.5em;
                 text-transform: uppercase;
                 z-index: 10;
-                font-family: 'Bebas Neue', cursive;
+                font-family: 'Roboto Mono', monospace;
     
                 -webkit-animation: scale-in-ver-top 1s ease-in-out 1s both;
                 animation: scale-in-ver-top 1s ease-in-out 1s both;
@@ -2398,7 +2409,7 @@ footer{
                                 font-size: var(--fs-l);
                                 position: relative;
                                 top: 25vh;
-                                font-family: 'Bebas Neue', cursive;
+                                font-family: 'Roboto Mono', monospace;
     
                                 -webkit-animation: slide-in-left 1s ease-in-out 1s both;
                                     animation: slide-in-left 1s ease-in-out 1s both;
@@ -2472,7 +2483,7 @@ footer{
                                 font-size: var(--fs-l);
                                 position: relative;
                                 top: 12%;
-                                font-family: 'Bebas Neue', cursive;
+                                font-family: 'Roboto Mono', monospace;
     
                                 -webkit-animation: slide-in-left 1s ease-in-out 1s both;
                                     animation: slide-in-left 1s ease-in-out 1s both;
@@ -2517,19 +2528,19 @@ footer{
                 .work_contact_btn{
                     width: 8em;
                     height: 2.5em;
-                    border: 1px solid var(--color-ming);
                     position: absolute;
-                    top: 55%;
+                    top: 60%;
                     display: flex;
                     justify-content: start;
                     align-items: center;
                     text-decoration: none;
                     right: 2%;
                     border-radius: 1.5em;
+                    z-index: 10;
+                    border: 1px solid var(--color-ming);
     
                     button{
                         background: transparent;
-                        color: var(--color-ming);
                         border: none;
                         font-size: var(--fs-m);
                         padding: .5em;
@@ -2622,7 +2633,7 @@ footer{
                     p{
                         margin: 0;
                         font-size: var(--fs-xl);
-                        font-family: 'Bebas Neue', cursive;
+                        font-family: 'Roboto Mono', monospace;
     
                         -webkit-animation: scale-in-left 1s ease-in-out 2s both;
                                         animation: scale-in-left 1s ease-in-out 2s both;
@@ -2649,7 +2660,7 @@ footer{
                     p{
                         margin: 0;
                         font-size: var(--fs-xl);
-                        font-family: 'Bebas Neue', cursive;
+                        font-family: 'Roboto Mono', monospace;
     
                         -webkit-animation: scale-in-right 1s ease-in-out 1.5s both;
                                         animation: scale-in-right 1s ease-in-out 1.5s both;
@@ -2726,7 +2737,7 @@ footer{
     
                     .card_header{
                         width: 100%;
-                        font-family: 'Bebas Neue', cursive;
+                        font-family: 'Roboto Mono', monospace;
                         font-size: var(--fs-m);
                         font-weight: 600;
                         position: relative;
@@ -2805,14 +2816,14 @@ footer{
                             margin: 0;
                             font-size: var(--fs-xl);
                             color: black;
-                            font-family: 'Bebas Neue', Cursive;
+                            font-family: 'Roboto Mono', monospace;
                             line-height: .8em;
                         }
     
                         span{
                             text-transform: uppercase;
                             font-size: var(--fs-m);
-                            font-family: 'Bebas Neue', Cursive;
+                            font-family: 'Roboto Mono', monospace;
                             position: relative;
                             top: 10%;
                         }
@@ -2831,7 +2842,7 @@ footer{
                             flex-direction: row;
                             gap: .1em;
                             position: absolute;
-                            top: -25%;
+                            top: -15%;
     
     
                             a{
@@ -3133,7 +3144,7 @@ footer{
                                         border: .1em solid var(--color-grey);
                                         display: block;
                                         text-align: center;
-                                        font-family: Geneva-regular;
+                                       font-family: 'Petrona', serif;
                                         font-size: 1em;
                                         border-radius: 0.5em;
         
@@ -3196,7 +3207,7 @@ footer{
         justify-content: space-between;
         align-items: center;
         padding: .5em;
-        font-family: geneva-regular;
+       font-family: 'Petrona', serif;
         color: #929497;
         text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
         border-top: 1px solid var(--color-primary);
