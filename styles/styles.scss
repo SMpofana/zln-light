@@ -1762,6 +1762,111 @@ footer{
     }
 }
 
+.submit-form-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 1);
+    align-items: center;
+
+    .form-submit-header{
+        width: 100%;
+        height: 12em;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        flex-wrap: wrap;
+        position: absolute;
+        top: 2em;
+        left: 2em;
+        color: rgba(43, 131, 181, 1);
+
+        .submit-form-circles{
+            width: 100%;
+            height: 5em;
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+            position: absolute;
+
+            .circle{
+
+                width: 3em;
+                height: 3em;
+                background: none;
+                border: 5px  solid rgba(43, 131, 181, 1);
+                border-radius: 3em;
+
+
+            }
+        }
+    
+        
+    
+        h1{
+            margin: 0;
+            font-size: 3em;
+            font-family: "Futura-Bold", arial;
+            font-weight: 900;
+            position: relative;
+            top: 50%;
+            display: flex;
+            justify-content: center;
+            text-transform: uppercase;
+    
+        }
+    }
+    
+    .form-submit-body{
+        width: 50%;
+        position: relative;
+        top: 45%;
+        color: rgba(43, 131, 181, 1);
+        font-size: 1.5em;
+        font-family: "Futura-Bold", arial;
+        text-align: center;
+        
+        
+    }
+
+    button{
+        width: 10%;
+        height: 3em;
+        color: rgba(43, 131, 181, 1);
+        background-color: none ;
+        border: 2px solid rgba(43, 131, 181, 1);
+        position: relative;
+        top: 20%;
+        font-size: 1em;
+        font-family: 'Futura-Bold',arial;
+        cursor: pointer;
+        
+        &:hover{
+            color: rgba(255, 255, 255, 1);
+            background-color: rgba(43, 131, 181, 1);
+            border: none;
+        }
+    }
+
+    .form-submit-footer{
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        img{
+            width: 3em;
+            height: 3em;
+            object-fit: cover;
+    
+    
+        }
+    }
+}
+
 @media (max-width: 35em){
 
     :root{
@@ -2033,7 +2138,7 @@ footer{
                font-family: 'Petrona', serif;
                 /* From https://css.glass */
                 background: rgba(70, 70, 70, 0.07);
-                border-radius: 16px;
+                border-radius: .5em;
                 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
                 backdrop-filter: blur(4.3px);
                 -webkit-backdrop-filter: blur(4.3px);
@@ -2146,10 +2251,17 @@ footer{
                         justify-content: space-between;
                         position: absolute;
                         bottom: -100%;
+                        padding: .2em;
     
                         &.active{
                             bottom: 0;
                             transition: all 0.5s ease-in-out;
+                            background: rgba(70, 70, 70, 0.07);
+                            border-radius: .5em;
+                            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                            backdrop-filter: blur(4.3px);
+                            -webkit-backdrop-filter: blur(4.3px);
+                            border: 1px solid rgba(70, 70, 70, 0.07);
                         }
     
                         .header_bottom_headline{
@@ -2167,6 +2279,8 @@ footer{
                         .header_bottom_copy{
                             position: relative;
                             bottom: 30%;
+
+                            
                         }
                     }
                 }

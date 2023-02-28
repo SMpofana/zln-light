@@ -6,6 +6,9 @@ const burgerline2 = burgerline1.nextElementSibling;
 const burgerline3 = burgerMenu.lastElementChild;
 
 const menu = document.querySelector(".menu_items");
+const menuItems = Array.from(menu.children);
+
+
 
 burgerMenu.addEventListener("click", (e) =>{
 
@@ -14,9 +17,25 @@ burgerMenu.addEventListener("click", (e) =>{
     menu.classList.toggle('active');
     burgerline1.classList.toggle('active');
     burgerline2.classList.toggle('active');
-    burgerline3.classList.toggle('active')
+    burgerline3.classList.toggle('active');
+
+    
+
+    
+
+
 
 })
+
+menuItems.forEach((item)=>{
+  item.addEventListener('click',()=>{
+    menu.classList.toggle('active');
+    burgerline1.classList.toggle('active');
+    burgerline2.classList.toggle('active');
+    burgerline3.classList.toggle('active');
+  })
+})
+  
 
 //header solutions carousel
 

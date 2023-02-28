@@ -1255,6 +1255,93 @@ footer .connect .tel-info p {
   font-size: 1.2em;
 }
 
+.submit-form-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+}
+.submit-form-container .form-submit-header {
+  width: 100%;
+  height: 12em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  color: rgb(43, 131, 181);
+}
+.submit-form-container .form-submit-header .submit-form-circles {
+  width: 100%;
+  height: 5em;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  position: absolute;
+}
+.submit-form-container .form-submit-header .submit-form-circles .circle {
+  width: 3em;
+  height: 3em;
+  background: none;
+  border: 5px solid rgb(43, 131, 181);
+  border-radius: 3em;
+}
+.submit-form-container .form-submit-header h1 {
+  margin: 0;
+  font-size: 3em;
+  font-family: "Futura-Bold", arial;
+  font-weight: 900;
+  position: relative;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+}
+.submit-form-container .form-submit-body {
+  width: 50%;
+  position: relative;
+  top: 45%;
+  color: rgb(43, 131, 181);
+  font-size: 1.5em;
+  font-family: "Futura-Bold", arial;
+  text-align: center;
+}
+.submit-form-container button {
+  width: 10%;
+  height: 3em;
+  color: rgb(43, 131, 181);
+  background-color: none;
+  border: 2px solid rgb(43, 131, 181);
+  position: relative;
+  top: 20%;
+  font-size: 1em;
+  font-family: "Futura-Bold", arial;
+  cursor: pointer;
+}
+.submit-form-container button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(43, 131, 181);
+  border: none;
+}
+.submit-form-container .form-submit-footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.submit-form-container .form-submit-footer img {
+  width: 3em;
+  height: 3em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 @media (max-width: 35em) {
   :root {
     --color-primary: #2B83B5;
@@ -1469,7 +1556,7 @@ footer .connect .tel-info p {
     font-family: "Petrona", serif;
     /* From https://css.glass */
     background: rgba(70, 70, 70, 0.07);
-    border-radius: 16px;
+    border-radius: 0.5em;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4.3px);
     -webkit-backdrop-filter: blur(4.3px);
@@ -1561,10 +1648,17 @@ footer .connect .tel-info p {
     justify-content: space-between;
     position: absolute;
     bottom: -100%;
+    padding: 0.2em;
   }
   #landing_header .header_bottom .header_bottom_solutions .header__bottom__carousel .header__bottom__carousel__track .header__bottom__slide.active {
     bottom: 0;
     transition: all 0.5s ease-in-out;
+    background: rgba(70, 70, 70, 0.07);
+    border-radius: 0.5em;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.3px);
+    -webkit-backdrop-filter: blur(4.3px);
+    border: 1px solid rgba(70, 70, 70, 0.07);
   }
   #landing_header .header_bottom .header_bottom_solutions .header__bottom__carousel .header__bottom__carousel__track .header__bottom__slide .header_bottom_headline {
     position: relative;
