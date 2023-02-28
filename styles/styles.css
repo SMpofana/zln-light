@@ -138,16 +138,6 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
-.scroll_tracker {
-  inset: 0 auto 0 0;
-  width: 0.5em;
-  left: 0;
-  background-color: #2B83B5;
-  position: fixed;
-  z-index: 15;
-  transform-origin: top;
-}
-
 section {
   width: 100%;
   height: 100%;
@@ -598,13 +588,12 @@ section {
 #work .work_container .work_body .work_content .business__work__container .business_work_card {
   width: 100%;
   position: absolute;
-  left: 100%;
   display: flex;
   flex-direction: column;
   gap: 2em;
+  transition: all 0.3s ease-in-out;
 }
 #work .work_container .work_body .work_content .business__work__container .business_work_card.current_card {
-  left: 0;
   transition: all 0.3s ease-in-out;
 }
 #work .work_container .work_body .work_content .business__work__container .business_work_card .work_card_title {
@@ -628,6 +617,19 @@ section {
   -o-object-fit: cover;
      object-fit: cover;
   box-shadow: 3px -3px var(--color-ming);
+}
+#work .work_container .work_body .work_content .business_work_nav {
+  width: 100%;
+  height: 1.5em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 40%;
+  left: 0%;
+  gap: 10em;
+  font-size: 1.5em;
+  color: var(--color-ming);
+  cursor: pointer;
 }
 #work .work_container .work_body .work_content .home__work__container {
   width: 100%;
@@ -672,6 +674,19 @@ section {
   -o-object-fit: cover;
      object-fit: cover;
   box-shadow: 3px -3px var(--color-ming);
+}
+#work .work_container .work_body .work_content .home_work_nav {
+  width: 100%;
+  height: 1.5em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 40%;
+  left: 0%;
+  gap: 10em;
+  font-size: 1.5em;
+  color: var(--color-ming);
+  cursor: pointer;
 }
 #work .work_container .work_body .work_contact_btn {
   width: 10em;
@@ -833,6 +848,7 @@ section {
   width: 100%;
   height: 100vh;
   top: 70em;
+  margin-top: 4em;
 }
 #contact .contact_container {
   width: 100%;
@@ -1253,16 +1269,6 @@ footer .connect .tel-info p {
     --fs-l: 2em;
     --fs-m: 1.2em;
     --fs-s: .5em;
-  }
-  .scroll_tracker {
-    inset: 0 auto 0 0;
-    width: 0.5em;
-    left: 0;
-    background-color: #2B83B5;
-    position: fixed;
-    z-index: 15;
-    transform-origin: top;
-    display: none;
   }
   section {
     width: 100%;
@@ -1774,7 +1780,7 @@ footer .connect .tel-info p {
   }
   #work .work_container .work_body .work_content .business__work__container .business_work_card .work_card_img {
     width: 95%;
-    height: 45%;
+    height: 40%;
     position: absolute;
     left: 0;
     top: -4em;
@@ -1786,6 +1792,17 @@ footer .connect .tel-info p {
     -o-object-fit: cover;
        object-fit: cover;
     box-shadow: none;
+  }
+  #work .work_container .work_body .work_content .business_work_nav {
+    width: 100%;
+    height: 1.5em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 60%;
+    gap: 3em;
+    font-size: 1.2em;
+    color: var(--color-ming);
   }
   #work .work_container .work_body .work_content .home__work__container {
     width: 100%;
@@ -1818,21 +1835,22 @@ footer .connect .tel-info p {
   #work .work_container .work_body .work_content .home__work__container .home_work_card .work_card_title {
     font-size: var(--fs-l);
     position: relative;
-    top: 12%;
+    top: 20vh;
     font-family: "Roboto Mono", monospace;
     animation: slide-in-left 1s ease-in-out 1s both;
   }
   #work .work_container .work_body .work_content .home__work__container .home_work_card .work_card_copy {
     width: 100%;
     font-size: var(--fs-m);
-    line-height: 1.5em;
+    line-height: 1.2em;
     position: relative;
-    top: 3em;
+    top: 15vh;
+    padding: 0.1em;
     animation: slide-in-left 1s ease-in-out 1s both;
   }
   #work .work_container .work_body .work_content .home__work__container .home_work_card .work_card_img {
     width: 95%;
-    height: 20%;
+    height: 30%;
     position: absolute;
     left: 0;
     top: -4em;
@@ -1844,6 +1862,17 @@ footer .connect .tel-info p {
     -o-object-fit: cover;
        object-fit: cover;
     box-shadow: none;
+  }
+  #work .work_container .work_body .work_content .home_work_nav {
+    width: 100%;
+    height: 1.5em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 60%;
+    gap: 3em;
+    font-size: 1.2em;
+    color: var(--color-ming);
   }
   #work .work_container .work_body .work_contact_btn {
     width: 8em;
@@ -1857,7 +1886,6 @@ footer .connect .tel-info p {
     right: 2%;
     border-radius: 1.5em;
     z-index: 10;
-    border: 1px solid var(--color-ming);
   }
   #work .work_container .work_body .work_contact_btn button {
     background: transparent;
@@ -1866,6 +1894,7 @@ footer .connect .tel-info p {
     padding: 0.5em;
     position: relative;
     top: 0;
+    border: 1px solid var(--color-ming);
   }
   #work .work_container .work_body .work_contact_btn button:hover {
     background-color: var(--color-ming);
@@ -2010,7 +2039,7 @@ footer .connect .tel-info p {
     font-size: var(--fs-m);
     font-weight: 600;
     position: relative;
-    top: 50%;
+    top: 45%;
     padding: 0.2em;
   }
   #solutions .solutions_container .solution_card_container .solution_card .card_text {
@@ -2102,7 +2131,7 @@ footer .connect .tel-info p {
     position: absolute;
     z-index: 1;
   }
-  #contact .contact_container .contact_section#call-to-action .cta_body .social_contact a .social_icon svg {
+  #contact .contact_container .contact_section#call-to-action .cta_body .social_contact a .social_icon i {
     font-size: 1.5em;
     color: var(--color-primary);
   }
@@ -2125,13 +2154,6 @@ footer .connect .tel-info p {
   }
   #contact .contact_container .contact_section#call-to-action .cta_body .social_contact a:hover .social_icon svg {
     color: white;
-  }
-  #contact .contact_container .contact_section#call-to-action .cta_body .social_contact a:hover p {
-    animation: scale-in-hor-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    transition: all 0.5s ease-in-out;
-    background-color: white;
-    color: black;
-    text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.75);
   }
   #contact .contact_container .contact_section#call-to-action .cta_body .social_contact a:hover .solution-container {
     display: flex;
