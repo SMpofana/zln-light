@@ -122,7 +122,7 @@ html {
   height: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
@@ -136,6 +136,10 @@ body {
   overscroll-behavior-x: none;
   overflow-x: hidden;
   background-color: rgb(255, 255, 255);
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 section {
@@ -923,7 +927,7 @@ section {
   position: absolute;
   z-index: 1;
 }
-#contact .contact_container .contact_section#call-to-action .cta_body .social_contact a .social_icon svg {
+#contact .contact_container .contact_section#call-to-action .cta_body .social_contact a .social_icon i {
   font-size: 1.5em;
   color: var(--color-primary);
 }
@@ -1054,7 +1058,7 @@ section {
   text-align: center;
   border-bottom: 0.1rem solid var(--color-grey);
   background: transparent;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 #contact .contact_container .contact_section#contact_form .form-container .form-body .form-section .gen-form-element #name-icon {
   position: absolute;
@@ -1068,7 +1072,7 @@ section {
   left: 6%;
   top: 6%;
   z-index: -1;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-grey);
 }
 #contact .contact_container .contact_section#contact_form .form-container .form-body .form-section .gen-form-element #surname-icon {
   position: absolute;
@@ -1131,10 +1135,11 @@ section {
   height: 13rem;
   border: none;
   display: block;
-  text-align: center;
+  text-align: left;
   font-family: "Petrona", serif;
   font-size: 1em;
   border-radius: 0.5em;
+  border: 2px solid var(--color-grey);
 }
 #contact .contact_container .contact_section#contact_form .form-container .form-body .form-section.active {
   transform: translateX(0%);
@@ -1590,7 +1595,7 @@ footer .connect .tel-info p {
     height: 45%;
     position: absolute;
     left: 0;
-    top: 65%;
+    top: 60%;
     display: flex;
     overflow: hidden;
     z-index: 10;
@@ -1601,11 +1606,11 @@ footer .connect .tel-info p {
     flex-direction: column;
     position: relative;
     left: 0.2em;
-    bottom: 0;
+    top: 0;
   }
   #landing_header .header_bottom .header_bottom_solutions .header_bottom_nav {
     width: 100%;
-    height: 30%;
+    height: 25%;
     position: relative;
   }
   #landing_header .header_bottom .header_bottom_solutions .header_bottom_nav .indicator_container {
@@ -1628,16 +1633,19 @@ footer .connect .tel-info p {
   }
   #landing_header .header_bottom .header_bottom_solutions .header__bottom__carousel {
     width: 100%;
-    height: 70%;
+    height: 75%;
     position: relative;
     bottom: 2em;
     overflow: hidden;
   }
   #landing_header .header_bottom .header_bottom_solutions .header__bottom__carousel .header__bottom__carousel__track {
-    height: 100%;
+    height: 98%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    position: relative;
+    bottom: 5%;
+    overflow: hidden;
   }
   #landing_header .header_bottom .header_bottom_solutions .header__bottom__carousel .header__bottom__carousel__track .header__bottom__slide {
     width: 100%;
@@ -1676,7 +1684,7 @@ footer .connect .tel-info p {
   }
   #landing_header .header_bottom .header_bottom_vision {
     position: absolute;
-    top: -10em;
+    bottom: 90%;
     right: 2%;
     display: flex;
     gap: 0.5em;
